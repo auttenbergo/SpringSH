@@ -1,0 +1,13 @@
+package {PACKAGE}.model.mapper;
+
+import {PACKAGE}.model.dto.{DTO_CLASS_NAME};
+import {PACKAGE}.model.entity.{ENTITY_CLASS_NAME};
+
+public class {MODEL_NAME}Mapper{
+
+    public static {DTO_CLASS_NAME} entityToDTO({ENTITY_CLASS_NAME} {ENTITY_VAR_NAME}){
+        // TODO: Fill
+        return null;
+    }
+
+}

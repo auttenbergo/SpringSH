@@ -1,0 +1,36 @@
+package {PACKAGE}.service;
+
+import {PACKAGE}.repository.{REPOSITORY_CLASS_NAME};
+import {PACKAGE}.model.entity.{ENTITY_CLASS_NAME};
+import {PACKAGE}.model.param.{ADD_MODEL_PARAM_CLASS_NAME};
+import {PACKAGE}.model.param.{UPDATE_MODEL_PARAM_CLASS_NAME};
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
+
+@Service
+@RequiredArgsConstructor
+public class {SERVICE_CLASS_NAME}{
+
+    private final {REPOSITORY_CLASS_NAME} {REPOSITORY_VAR_NAME};
+
+    public {ENTITY_CLASS_NAME} get{MODEL_NAME}ById(Long {MODEL_NAME_LOWER}Id){
+        // TODO: implement
+        return null;
+    }
+
+    public {ENTITY_CLASS_NAME} create{MODEL_NAME}({ADD_MODEL_PARAM_CLASS_NAME} param){
+        // TODO: implement
+        return null;
+    }
+
+    public {ENTITY_CLASS_NAME} update{MODEL_NAME}({UPDATE_MODEL_PARAM_CLASS_NAME} param){
+        // TODO: implement
+        return null;
+    }
+
+    public String delete{MODEL_NAME}ById(Long {MODEL_NAME_LOWER}Id){
+        // TODO: implement
+        return null;
+    }
+
+}

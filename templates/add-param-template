@@ -1,0 +1,17 @@
+package {PACKAGE}.model.param;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+public class {ADD_PARAM_CLASS_NAME}{
+    
+    // TODO: Fill
+
+}

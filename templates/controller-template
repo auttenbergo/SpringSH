@@ -1,0 +1,42 @@
+package {PACKAGE}.controller;
+
+import {PACKAGE}.model.dto.{DTO_CLASS_NAME};
+import {PACKAGE}.facade.{FACADE_CLASS_NAME};
+import {PACKAGE}.model.param.{ADD_MODEL_PARAM_CLASS_NAME};
+import {PACKAGE}.model.param.{UPDATE_MODEL_PARAM_CLASS_NAME};
+import lombok.RequiredArgsConstructor;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequestMapping("/{API_BASE_PATH}")
+@RequiredArgsConstructor
+public class {CONTROLLER_CLASS_NAME}{
+    
+    private final {FACADE_CLASS_NAME} {FACADE_VAR_NAME};
+
+    @GetMapping("/{userId}")
+    public ResponseEntity<{DTO_CLASS_NAME}> get{MODEL_NAME}ById(@PathVariable Long {MODEL_NAME_LOWER}Id){
+        // TODO: implement
+        return ResponseEntity.ok(null);
+    }
+
+    @PutMapping("/create")
+    public ResponseEntity<{DTO_CLASS_NAME}> create{MODEL_NAME}(@RequestBody {ADD_MODEL_PARAM_CLASS_NAME} param){
+        // TODO: implement
+        return ResponseEntity.ok(null);
+    }
+
+    @PostMapping("/update")
+    public ResponseEntity<{DTO_CLASS_NAME}> update{MODEL_NAME}(@RequestBody {UPDATE_MODEL_PARAM_CLASS_NAME} param){
+        // TODO: implement
+        return ResponseEntity.ok(null);
+    }
+
+    @DeleteMapping("/delete/{userId}")
+    public ResponseEntity<String> delete{MODEL_NAME}ById(@PathVariable Long {MODEL_NAME_LOWER}Id){
+        // TODO: implement
+        return ResponseEntity.ok(null);
+    }
+
+}

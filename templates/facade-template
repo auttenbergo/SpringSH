@@ -1,0 +1,38 @@
+package {PACKAGE}.facade;
+
+import {PACKAGE}.model.dto.{DTO_CLASS_NAME};
+import {PACKAGE}.model.param.{ADD_MODEL_PARAM_CLASS_NAME};
+import {PACKAGE}.model.param.{UPDATE_MODEL_PARAM_CLASS_NAME};
+import {PACKAGE}.model.mapper.{MAPPER_CLASS_NAME};
+import {PACKAGE}.service.{SERVICE_CLASS_NAME};
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
+
+@Service
+@RequiredArgsConstructor
+public class {FACADE_CLASS_NAME}{
+    
+    private final {SERVICE_CLASS_NAME} {SERVICE_VAR_NAME};
+
+    public {DTO_CLASS_NAME} get{MODEL_NAME}ById(Long {MODEL_NAME_LOWER}Id){
+        // TODO: implement
+        return null;
+    }
+
+    public {DTO_CLASS_NAME} create{MODEL_NAME}({ADD_MODEL_PARAM_CLASS_NAME} param){
+        // TODO: implement
+        return null;
+    }
+
+    public {DTO_CLASS_NAME} update{MODEL_NAME}({UPDATE_MODEL_PARAM_CLASS_NAME} param){
+        // TODO: implement
+        return null;
+    }
+
+    public String delete{MODEL_NAME}ById(Long {MODEL_NAME_LOWER}Id){
+        // TODO: implement
+        return null;
+    }
+
+
+}

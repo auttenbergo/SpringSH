@@ -17,21 +17,25 @@ FOLDER_PATH="${1}"
 
 if [[ ! -d "${FOLDER_PATH}" ]]
 then
-    echo "${SCRIPT_NAME}: ${FOLDER_PATH} directory not found" >&2
+    echo "${SCRIPT_NAME}: ${FOLDER_PATH} project directory not found" >&2
     exit 1
 fi
 
-mkdir "${FOLDER_PATH}/config"
-mkdir "${FOLDER_PATH}/controller"
-mkdir "${FOLDER_PATH}/facade"
-mkdir "${FOLDER_PATH}/service"
-mkdir "${FOLDER_PATH}/repository"
-mkdir "${FOLDER_PATH}/util"
+while true
+do
+    read -p "Are you sure you want to init the folder structure in ${FOLDER_PATH}?(y/N): " ANSWER
 
-mkdir "${FOLDER_PATH}/model"
-mkdir "${FOLDER_PATH}/model/dto"
-mkdir "${FOLDER_PATH}/model/entity"
-mkdir "${FOLDER_PATH}/model/mapper"
-mkdir "${FOLDER_PATH}/model/param"
+    case "$ANSWER" in
+        y) break ;;
+        N) echo "Exiting the program..."; exit 0 ;;
+        *) echo 'not a valid answer, use (y/N)' ;;
+    esac
+done
 
+FOLDERS="/config /controller /facade /service /repository /util /model /model/dto /model/entity /model/mapper /model/param"
+
+for FOLDER in ${FOLDERS}
+do
+    mkdir "${FOLDER_PATH}${FOLDER}" &> /dev/null
+done
 

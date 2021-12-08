@@ -29,9 +29,10 @@ readonly MAPPER="${MODEL}Mapper";
 readonly ADD_PARAM="Add${MODEL}Param"
 readonly UPDATE_PARAM="Update${MODEL}Param"
 
+
 # Get Exported Parser Functions
 
-source ./template-parsers.sh
+source "${SCRIPT_PATH}"/template-parsers.sh
 
 
 # Function which creates the ${1} and writes in ${1} the value of ${2}

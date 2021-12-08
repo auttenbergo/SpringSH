@@ -21,9 +21,11 @@ then
     exit 1
 fi
 
+# Double checking the user decision
+
 while true
 do
-    read -p "Are you sure you want to init the folder structure in ${FOLDER_PATH}?(y/N): " ANSWER
+    read -p "Are you sure you want to init the folder structure in ${FOLDER_PATH}? (y/N): " ANSWER
 
     case "$ANSWER" in
         y) break ;;
@@ -32,10 +34,15 @@ do
     esac
 done
 
-FOLDERS="/config /controller /facade /service /repository /util /model /model/dto /model/entity /model/mapper /model/param"
+# The creation of directories
+
+readonly FOLDERS="/config /controller /facade /service /repository /util /model /model/dto /model/entity /model/mapper /model/param"
 
 for FOLDER in ${FOLDERS}
 do
     mkdir "${FOLDER_PATH}${FOLDER}" &> /dev/null
 done
+
+echo "Program has finished the execution"
+exit 0
 

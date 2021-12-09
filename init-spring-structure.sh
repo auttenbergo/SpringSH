@@ -1,6 +1,7 @@
 #!/bin/bash
 
 SCRIPT_NAME="$(basename "$0")"
+SCRIPT_PATH="$(dirname "${0}")"
 
 # Checking that user is using the script correctly
 
@@ -36,11 +37,11 @@ done
 
 # The creation of directories
 
-readonly FOLDERS="/config /controller /facade /service /repository /util /model /model/dto /model/entity /model/mapper /model/param"
+readonly FOLDERS=$(cat "${SCRIPT_PATH}/folder-paths")
 
 for FOLDER in ${FOLDERS}
 do
-    mkdir "${FOLDER_PATH}${FOLDER}" &> /dev/null
+    mkdir "${FOLDER_PATH}/${FOLDER}" &> /dev/null
 done
 
 echo "Program has finished the execution"

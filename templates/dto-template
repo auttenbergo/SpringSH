@@ -9,7 +9,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class {MODEL_NAME}Dto{
+public class {DTO_CLASS_NAME}{
 
     private Long id;
 

@@ -1,5 +1,15 @@
 #!/bin/bash
 
+readonly CONTROLLER="${MODEL}Controller"
+readonly FACADE="${MODEL}Facade"
+readonly SERVICE="${MODEL}Service"
+readonly REPOSITORY="${MODEL}Repository"
+readonly ENTITY="${MODEL}Entity"
+readonly DTO="${MODEL}Dto"
+readonly MAPPER="${MODEL}Mapper";
+readonly ADD_PARAM="Add${MODEL}Param"
+readonly UPDATE_PARAM="Update${MODEL}Param"
+
 get_controller_parsed () {
     local CONTROLLER_TEMPLATE=''
     local API_BASE_PATH=''
@@ -28,7 +38,7 @@ get_dto_parsed () {
 
     DTO_TEMPLATE=$(/usr/bin/cat "${SCRIPT_PATH}"/templates/dto-template)
     DTO_TEMPLATE=${DTO_TEMPLATE//\{PACKAGE\}/${PACKAGE}}
-    DTO_TEMPLATE=${DTO_TEMPLATE//\{MODEL_NAME\}/$MODEL}
+    DTO_TEMPLATE=${DTO_TEMPLATE//\{DTO_CLASS_NAME\}/$DTO}
     echo "${DTO_TEMPLATE}"
 }
 
@@ -98,7 +108,7 @@ get_entity_parsed () {
 
     ENTITY_TEMPLATE=$(/usr/bin/cat "${SCRIPT_PATH}"/templates/entity-template)
     ENTITY_TEMPLATE=${ENTITY_TEMPLATE//\{PACKAGE\}/${PACKAGE}}
-    ENTITY_TEMPLATE=${ENTITY_TEMPLATE//\{ENTITY_CLASS_NAME\}/${MODEL}}
+    ENTITY_TEMPLATE=${ENTITY_TEMPLATE//\{ENTITY_CLASS_NAME\}/${ENTITY}}
     ENTITY_TEMPLATE=${ENTITY_TEMPLATE//\{ENTITY_TABLE_NAME\}/${ENTITY_TABLE_NAME,}}
 
     echo "${ENTITY_TEMPLATE}"

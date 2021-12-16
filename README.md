@@ -2,7 +2,7 @@
 
 ## Generate Model
 
-**Usage:** sh generate-model.sh [-m MODEL] [p PROJECT_PATH]
+**Usage:** sh generate-model.sh [-m MODEL] [-p PROJECT_PATH]
 
 Generate the model related objects in the Spring project
 
